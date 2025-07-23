@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Spirituel - Nathane Mulimbi</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a1f44;
+      color: #f1e6d1;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Merriweather', serif;
+      color: #f9c74f;
+    }
+
+    .navbar {
+      background: #112d58;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #f9c74f !important;
+    }
+
+    .nav-link {
+      color: #f1e6d1 !important;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #f9c74f !important;
+    }
+
+    /* Hero */
+    #hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center center/cover no-repeat;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #f9c74f;
+      padding: 0 1rem;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 31, 68, 0.75);
+      z-index: 0;
+    }
+
+    #hero .content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    #hero .content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #f9c74f;
+    }
+
+    #hero .content p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #f1e6d1cc;
+    }
+
+    /* Section style */
+    section {
+      padding: 4rem 0;
+    }
+
+    /* Profile Image */
+    .profile-img {
+      max-width: 250px;
+      border-radius: 50%;
+      border: 5px solid #f9c74f;
+      box-shadow: 0 0 15px #f9c74faa;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Cards */
+    .card-custom {
+      background: #112d58;
+      border: none;
+      color: #f1e6d1;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 12px #f9c74f33;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px #f9c74f99;
+    }
+
+    /* Buttons */
+    .btn-custom {
+      background-color: #f9c74f;
+      color: #0a1f44;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #e0b735;
+      color: #0a1f44;
+    }
+
+    /* Footer */
+    footer {
+      background: #112d58;
+      color: #f1e6d1cc;
+      padding: 2rem 0;
+    }
+
+    /* Animation fadeIn */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation-fill-mode: forwards;
+      animation-name: fadeInUp;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nathane Mulimbi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars" style="color:#f9c74f; font-size:28px;"></i></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav fs-5">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="content fade-in">
+      <h1>Fixe tes yeux sur Jésus ✨</h1>
+      <p>Marcher avec foi, vivre dans la lumière et partager l'amour de Christ à travers mes actions.</p>
+      <a href="#contact" class="btn btn-custom btn-lg">Contacte-moi</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container text-center">
+    <img src="https://avatars.githubusercontent.com/u/1234567?v=4" alt="Photo de Nathane" class="profile-img fade-in" />
+    <h2 class="fade-in" style="animation-delay: 0.2s;">Nathane Mulimbi</h2>
+    <p class="lead fade-in" style="animation-delay: 0.4s; max-width: 700px; margin: 0 auto;">
+      Développeur web passionné par la foi chrétienne, je combine compétences tech et valeurs spirituelles pour impacter positivement.
+      Contactez-moi à <a href="mailto:jonathanmulimbi87@gmail.com" style="color:#f9c74f;">jonathanmulimbi87@gmail.com</a> ou par téléphone au <strong>097 81 77 878</strong>.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container">
+    <h2 class="text-center mb-5 fade-in">Projets Spirituels & Actions</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4 fade-in" style="animation-delay: 0.2s;">
+        <div class="card card-custom p-3">
+          <div class="card-body text-center">
+            <i class="fa fa-praying-hands fa-3x mb-3 text-warning"></i>
+            <h5 class="card-title">Groupe de prière</h5>
+            <p class="card-text">Organisation de sessions de prière hebdomadaires pour fortifier la foi en communauté.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in" style="animation-delay: 0.4s;">
+        <div class="card card-custom p-3">
+          <div class="card-body text-center">
+            <i class="fa fa-chalkboard-teacher fa-3x mb-3 text-warning"></i>
+            <h5 class="card-title">Ateliers spirituels</h5>
+            <p class="card-text">Sessions d’enseignement et d’encouragement pour jeunes et adultes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in" style="animation-delay: 0.6s;">
+        <div class="card card-custom p-3">
+          <div class="card-body text-center">
+            <i class="fa fa-hands-helping fa-3x mb-3 text-warning"></i>
+            <h5 class="card-title">Actions caritatives</h5>
+            <p class="card-text">Participation active à des œuvres sociales et solidaires dans la communauté.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2 class="text-center mb-5 fade-in">Contacte-moi</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 fade-in" style="animation-delay: 0.2s;">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom complet</label>
+            <input type="text" class="form-control" id="name" placeholder="Ton nom" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse email</label>
+            <input type="email" class="form-control" id="email" placeholder="exemple@domaine.com" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Écris ton message ici..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-custom w-100">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>© 2025 Nathane Mulimbi. Tous droits réservés.</p>
+    <p>
+      <a href="mailto:jonathanmulimbi87@gmail.com" style="color:#f9c74f;">jonathanmulimbi87@gmail.com</a> | Téléphone: 097 81 77 878
+    </p>
+    <div>
+      <a href="#" class="text-warning mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="#" class="text-warning mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="#" class="text-warning mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Simple fadeIn animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -100px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.style.animationPlayState = 'running';
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      fader.style.animationPlayState = 'paused';
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+
+</html>
